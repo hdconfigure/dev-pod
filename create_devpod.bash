@@ -4,4 +4,4 @@
 podman pod create --name "$1" -p 8080:8080
 
 # 2. Spin up an interactive Debian container inside that pod
-podman run -it --pod "$1" --name "$2" debian:stable /bin/bash
+podman run -d --pod "$1" --name "$2" debian:stable sleep infinity
