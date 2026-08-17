@@ -11,4 +11,4 @@ file="$3"
 
 podman cp "$container_id" "$file":/tmp/script.sh
 podman exec -it "$file" /bin/bash /tmp/script.sh
-podman pod stop "$container_id"
+podman pod stop "$pod_id"
