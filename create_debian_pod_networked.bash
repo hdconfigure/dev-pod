@@ -11,5 +11,6 @@ else
     podman pod create --name "$1" -p 8080:8080
 
     # 2. Spin up an interactive Debian container inside that pod
-    podman run -d --pod "$1" --name "$2" debian:stable sleep infinity
+    podman run -d --init --pod "$1" --name "$2" debian:stable sleep infinity
+#    podman run -d --pod "$1" --name "$2" debian:stable sleep infinity
 fi
